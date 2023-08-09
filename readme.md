@@ -5,7 +5,7 @@ in the database and generates a report that inlcudes the details of the most con
 
 Tools: Typescript , Node js, Express js, Alchemy and Supabase
 
-The enpoints : 
+The enpoints : https://ts-wallet.onrender.com 
 
 "/" : GET - to check the health of the server
 
