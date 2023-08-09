@@ -3,7 +3,7 @@
 A backend service that stores the latest 1000 transaction of ethereum wallet address - vitalik.eth (0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045) 
 in the database and generates a report that inlcudes the details of the most contacted wallet address.
 
-Tools: Javascript , Node js, Express js, Alchemy and Supabase
+Tools: Typescript , Node js, Express js, Alchemy and Supabase
 
 The enpoints : 
 
@@ -38,9 +38,8 @@ on success return 200, on error 400, and on server error 500
 
 ```
 {
-    "auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTE1NTU1MTZ9.G52dN86LUjHkPvTUs-ADpS2Uz0mR1BXq8B9uEw70K60"
+    "auth": "$2b$10$PAzXoJcCx4kmHVuYwq0GzOEikWfsKmu4MvjyahgZJ0p05VMfJqZ4y"
 }
-
 ```
 
 The below are authenicated with a token in the request header
@@ -51,25 +50,12 @@ The below are authenicated with a token in the request header
 
 ```
 {
-    "auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTE1NTU1MTZ9.G52dN86LUjHkPvTUs-ADpS2Uz0mR1BXq8B9uEw70K60"
+    "auth": "$2b$10$PAzXoJcCx4kmHVuYwq0GzOEikWfsKmu4MvjyahgZJ0p05VMfJqZ4y"
 }
 
 ```
 
 on success return 201, on error 400, and on server error 500
-
-"/api/data" : GET - get the stored transaction from the database
-
-*sample header*
-
-```
-{
-    "auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTE1NTU1MTZ9.G52dN86LUjHkPvTUs-ADpS2Uz0mR1BXq8B9uEw70K60"
-}
-
-```
-
-on success return 200, on error 400, and on server error 500
 
 "/api/report" : GET - get the account details with max transactions.
 
@@ -77,7 +63,7 @@ on success return 200, on error 400, and on server error 500
 
 ```
 {
-    "auth": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTE1NTU1MTZ9.G52dN86LUjHkPvTUs-ADpS2Uz0mR1BXq8B9uEw70K60"
+    "auth": "$2b$10$PAzXoJcCx4kmHVuYwq0GzOEikWfsKmu4MvjyahgZJ0p05VMfJqZ4y"
 }
 
 ```
@@ -100,6 +86,11 @@ on success return 200, on error 400, and on server error 500
 2. open terminal
 
     a. type ```npm install``` to install all the dependency
+    b. ```npm i -D nodemon concurrently```
+    c. add ``` "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
+  },``` in the package.json
     
-    b. run the command ```node index.js``` to start the server in port 4000 in localhost
+    b. run the command ```npm run dev``` to start the server in port 4000 in localhost
 
