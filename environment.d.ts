@@ -3,7 +3,7 @@ export {};
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      PORT?: number; // 👈️ mark optional
+      PORT?: string; // 👈️ mark optional
       DB_USER: string;
       SUPABASE_KEY: string;
       TOKEN_SECRET: string;

@@ -23,7 +23,8 @@ const logger = createLogger({
 //database config
 const supabase = createClient<Database>(
   "https://vautcfpbwbjpqtwyzmfe.supabase.co",
-  process.env.SUPABASE_KEY
+  process.env.SUPABASE_KEY,
+  {auth: { persistSession: false },}
 );
 
 logger.info("Database connected!!");
