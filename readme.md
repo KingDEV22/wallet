@@ -38,7 +38,7 @@ on success return 200, on error 400, and on server error 500
 
 ```
 {
-    "auth": "$2b$10$PAzXoJcCx4kmHVuYwq0GzOEikWfsKmu4MvjyahgZJ0p05VMfJqZ4y"
+    "auth": "$2b$10$KyN28mLrC1SP0S/JFLmHzO/rrbr..HrX7Y/2v7zE6z1goZllOpDBy"
 }
 ```
 
@@ -50,7 +50,7 @@ The below are authenicated with a token in the request header
 
 ```
 {
-    "auth": "$2b$10$PAzXoJcCx4kmHVuYwq0GzOEikWfsKmu4MvjyahgZJ0p05VMfJqZ4y"
+    "auth": "$2b$10$KyN28mLrC1SP0S/JFLmHzO/rrbr..HrX7Y/2v7zE6z1goZllOpDBy"
 }
 
 ```
@@ -63,7 +63,7 @@ on success return 201, on error 400, and on server error 500
 
 ```
 {
-    "auth": "$2b$10$PAzXoJcCx4kmHVuYwq0GzOEikWfsKmu4MvjyahgZJ0p05VMfJqZ4y"
+    "auth": "$2b$10$KyN28mLrC1SP0S/JFLmHzO/rrbr..HrX7Y/2v7zE6z1goZllOpDBy"
 }
 
 ```
@@ -85,12 +85,12 @@ on success return 200, on error 400, and on server error 500
 1. clone the repository
 2. open terminal
 
-    a. type ```npm install``` to install all the dependency
-    b. ```npm i -D nodemon concurrently```
+    a. type ```yarn install``` to install all the dependency
+    b. ```yarn add nodemon --dev```
     c. add ``` "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
   },``` in the package.json
     
-    b. run the command ```npm run dev``` to start the server in port 4000 in localhost
+    d. run the command ```yarn dev``` to start the server in port 4000 in localhost
 
