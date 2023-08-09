@@ -2,3 +2,7 @@ node_modules
 *.log
 transactions.json
 .env
+supabase
+tsconfig.json
+wallet.code-workspace
+dist
